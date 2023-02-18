@@ -7,7 +7,7 @@ export const FriendInfo = ({ friend: { avatar, name, isOnline } }) => {
       <Status status={isOnline}></Status>
 
       <NameText>{name}</NameText>
-      <img src={avatar} alt="User avatar" width="48" />
+      <img src={avatar} alt="avatar" width="48" />
     </ListOfFriendsItem>
   );
 };

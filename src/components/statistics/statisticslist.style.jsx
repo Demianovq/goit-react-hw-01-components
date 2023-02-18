@@ -1,7 +1,4 @@
 import styled from '@emotion/styled';
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
 
 export const StatList = styled.ul`
   margin-top: 100px;
@@ -17,7 +14,9 @@ export const StatItem = styled.li`
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  background-color: ${function randomBgColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }};
+  background-color: ${randomBgColor};
 `;
+
+function randomBgColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

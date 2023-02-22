@@ -12,8 +12,14 @@ import { Container } from './app.style';
 export const App = () => {
   return (
     <Container>
-      <Profile user={user} />
-      <Statistics stats={data} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics stats={data} title={'upload stats'} />
       <FriendsList friends={friends} />
       <TransactionHistory items={transactions} />
     </Container>

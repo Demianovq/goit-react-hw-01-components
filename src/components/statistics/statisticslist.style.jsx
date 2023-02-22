@@ -17,6 +17,21 @@ export const StatItem = styled.li`
   background-color: ${randomBgColor};
 `;
 
+export const StatBlock = styled.section`
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+`;
+
+export const Label = styled.span`
+  display: block;
+  font-weight: bold;
+`;
+
+export const Percentage = styled.span`
+  display: block;
+`;
+
 function randomBgColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }

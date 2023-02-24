@@ -5,13 +5,8 @@ import { ListOfFriends } from './friendList.style';
 export const FriendsList = ({ friends }) => {
   return (
     <ListOfFriends>
-      {friends.map(friend => (
-        <FriendInfo
-          key={friend.id}
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-        />
+      {friends.map(({ id, avatar, name, isOnline }) => (
+        <FriendInfo key={id} avatar={avatar} name={name} isOnline={isOnline} />
       ))}
     </ListOfFriends>
   );
